@@ -1,3 +1,15 @@
 {
-  "produtos": []
+  "produtos": [
+    {
+      "id": "notebook-acer-i3-8gb-ssd120",
+      "nome": "Notebook Acer (semi-novo)",
+      "categoria": "notebooks",
+      "imagens": [],
+      "descricao": "Processador Intel Core i3, 8GB de memória RAM, SSD 120GB.",
+      "preco": 1000,
+      "preco_promocional": 800,
+      "perfil_uso": ["uso-basico", "estudos-trabalho"],
+      "disponivel": true
+    }
+  ]
 }
