@@ -1,0 +1,98 @@
+# Painel de administração — Microcenter Informática
+# Autenticação via DecapBridge (decapbridge.com). Depois de criar o site lá e
+# conectar o repositório GitHub, a DecapBridge fornece "gateway_url" e "app_id" —
+# substitua os valores abaixo por eles antes de publicar o painel.
+backend:
+  name: git-gateway
+  branch: main
+  gateway_url: "https://SEU-APP.decapbridge.com"
+  app_id: "SUBSTITUA-PELO-APP-ID-DA-DECAPBRIDGE"
+
+media_folder: "images/produtos"
+public_folder: "/images/produtos"
+
+collections:
+  - name: "produtos"
+    label: "Produtos"
+    files:
+      - name: "catalogo"
+        label: "Catálogo de produtos"
+        file: "content/produtos.json"
+        fields:
+          - label: "Produtos"
+            name: "produtos"
+            widget: "list"
+            summary: "{{nome}}"
+            fields:
+              - label: "ID único (sem espaço/acento)"
+                name: "id"
+                widget: "string"
+                hint: "Exemplo: mouse-gamer-x1"
+              - label: "Nome do produto"
+                name: "nome"
+                widget: "string"
+              - label: "Categoria"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - { label: "Acessórios", value: "acessorios" }
+                  - { label: "Toners e cartuchos", value: "toners" }
+                  - { label: "Periféricos", value: "perifericos" }
+                  - { label: "Computadores", value: "computadores" }
+                  - { label: "Notebooks", value: "notebooks" }
+                  - { label: "Outros", value: "outros" }
+              - label: "Imagens do produto"
+                name: "imagens"
+                widget: "list"
+                field: { label: "Imagem", name: "imagem", widget: "image" }
+              - label: "Descrição"
+                name: "descricao"
+                widget: "text"
+                required: false
+              - label: "Preço original (R$)"
+                name: "preco"
+                widget: "number"
+                value_type: "float"
+                required: false
+                hint: "Deixe em branco para o produto aparecer como \"Consultar preço\""
+              - label: "Preço promocional (R$)"
+                name: "preco_promocional"
+                widget: "number"
+                value_type: "float"
+                required: false
+                hint: "Preencha só se o produto estiver em promoção. O site mostra o preço original riscado e este em destaque."
+              - label: "Perfil de uso (só para Computadores/Notebooks)"
+                name: "perfil_uso"
+                widget: "select"
+                multiple: true
+                required: false
+                hint: "Usado pelo assistente \"Monte seu PC\" para sugerir este produto"
+                options:
+                  - { label: "Uso básico", value: "uso-basico" }
+                  - { label: "Estudos e trabalho", value: "estudos-trabalho" }
+                  - { label: "Jogos leves / eSports", value: "jogos-leves" }
+                  - { label: "Jogos pesados", value: "jogos-pesados" }
+                  - { label: "Edição de vídeo/design", value: "edicao-video-design" }
+              - label: "Disponível"
+                name: "disponivel"
+                widget: "boolean"
+                default: true
+
+  - name: "servicos"
+    label: "Serviços"
+    files:
+      - name: "lista"
+        label: "Lista de serviços"
+        file: "content/servicos.json"
+        fields:
+          - label: "Serviços"
+            name: "servicos"
+            widget: "list"
+            summary: "{{titulo}}"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Resumo", name: "resumo", widget: "text" }
+              - label: "Itens inclusos"
+                name: "itens"
+                widget: "list"
+                field: { label: "Item", name: "item", widget: "string" }

@@ -1,0 +1,24 @@
+{
+  "servicos": [
+    {
+      "titulo": "Formatação e manutenção",
+      "resumo": "Formatação com backup dos seus arquivos, remoção de vírus, otimização de lentidão e instalação de programas essenciais.",
+      "itens": [
+        "Backup dos seus arquivos antes de formatar",
+        "Instalação do Windows e drivers",
+        "Remoção de vírus e malware",
+        "Instalação de programas essenciais"
+      ]
+    },
+    {
+      "titulo": "Montagem de PC gamer",
+      "resumo": "Montagem sob medida com peças escolhidas para o seu orçamento e o uso que você precisa — dos jogos leves aos mais pesados.",
+      "itens": [
+        "Escolha de peças compatíveis para o seu orçamento",
+        "Montagem, cabeamento e testes de estabilidade",
+        "Instalação do sistema e drivers de vídeo",
+        "Orientação de uso e garantia da montagem"
+      ]
+    }
+  ]
+}

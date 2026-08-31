@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo de produtos | Microcenter Informática</title>
+<meta name="description" content="Acessórios de computador, toners de impressora e periféricos com preços à vista ou promocionais. Peça direto pelo WhatsApp.">
+<link rel="icon" href="images/logo-transparente.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="index.html" class="brand"><img src="images/logo-transparente.png" alt="Microcenter Informática"></a>
+    <nav class="nav-links">
+      <a href="index.html#servicos">Serviços</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="monte-seu-pc.html">Monte seu PC</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#localizacao">Localização</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="cart-btn" aria-label="Carrinho">🛒<span class="cart-count">0</span></button>
+      <a class="btn btn-accent" href="https://wa.me/5519995901712" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="nav-toggle" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:56px">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Catálogo completo</span>
+      <h2>Produtos Microcenter Informática</h2>
+      <p>Filtre por categoria, adicione ao carrinho e finalize seu pedido pelo WhatsApp.</p>
+    </div>
+    <div class="catalog-toolbar reveal">
+      <button class="chip active" data-cat="todos">Todos</button>
+      <button class="chip" data-cat="acessorios">Acessórios</button>
+      <button class="chip" data-cat="toners">Toners e cartuchos</button>
+      <button class="chip" data-cat="perifericos">Periféricos</button>
+      <button class="chip" data-cat="computadores">Computadores</button>
+      <button class="chip" data-cat="notebooks">Notebooks</button>
+    </div>
+    <div class="product-grid reveal"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>© <span id="year"></span> Microcenter Informática.</span>
+      <a href="index.html#localizacao">R. Cap. Miguel Ferreira, 475 — Mococa/SP</a>
+    </div>
+  </div>
+</footer>
+
+<div class="float-stack">
+  <a class="float-btn whatsapp" href="https://wa.me/5519995901712" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.1-3.4-8.3zM12 21.4c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.4 9.4 0 0 1-1.5-5.1C2.1 6.6 6.6 2.1 12 2.1c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.5 9.5-9.8 9.5zm5.4-7.2c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5.2-.4c.1-.1.1-.3 0-.4-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+  <a class="float-btn instagram" href="https://www.instagram.com/microcenter_info/" target="_blank" rel="noopener" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1"/></svg>
+  </a>
+  <a class="float-btn facebook" href="https://www.facebook.com/microcentermococa" target="_blank" rel="noopener" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8.3h2.8l.4-3.2h-3.2V8.4c0-.9.3-1.6 1.7-1.6h1.7V3.9C16.6 3.8 15.6 3.7 14.4 3.7c-2.6 0-4.3 1.6-4.3 4.4v2.4H7.3v3.2H10V22h3.5z"/></svg>
+  </a>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+<script src="js/carrinho.js"></script>
+<script src="js/produtos.js"></script>
+</body>
+</html>
