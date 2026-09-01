@@ -204,11 +204,15 @@ p{margin:0}
   display:flex;flex-direction:column;transition:.2s;position:relative;
 }
 .product-card:hover{box-shadow:var(--shadow-m);transform:translateY(-3px)}
-.product-media{aspect-ratio:1/1;background:var(--surface-alt);position:relative;overflow:hidden}
+.product-media{aspect-ratio:1/1;background:var(--surface-alt);position:relative;overflow:hidden;cursor:pointer}
 .product-media img{width:100%;height:100%;object-fit:cover}
 .product-badge{
   position:absolute;top:10px;left:10px;background:var(--green-600);color:#fff;
   font-size:.7rem;font-weight:800;padding:5px 10px;border-radius:100px;letter-spacing:.02em;
+}
+.product-imgcount{
+  position:absolute;bottom:10px;right:10px;background:rgba(11,15,20,.72);color:#fff;
+  font-size:.7rem;font-weight:700;padding:4px 9px;border-radius:100px;
 }
 .product-body{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .product-cat{font-size:.7rem;font-weight:700;color:var(--ink-300);text-transform:uppercase;letter-spacing:.05em}
@@ -368,6 +372,31 @@ footer a:hover{color:#fff}
 .spec-tier li{font-size:.86rem;color:var(--ink-700)}
 .match-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:12px}
 @media (max-width:600px){.match-list{grid-template-columns:1fr}}
+
+/* ---------- Lightbox ---------- */
+.lightbox-overlay{
+  position:fixed;inset:0;background:rgba(6,15,20,.92);z-index:95;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .2s ease;
+}
+.lightbox-overlay.open{opacity:1;pointer-events:auto}
+.lightbox-stage{max-width:min(720px,86vw);max-height:80vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lightbox-img{max-width:100%;max-height:72vh;object-fit:contain;border-radius:var(--radius-m);background:#fff}
+.lightbox-count{color:#fff;font-size:.85rem;text-align:center}
+.lightbox-close{
+  position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.12);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;
+}
+.lightbox-prev,.lightbox-next{
+  position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;
+  background:rgba(255,255,255,.12);color:#fff;align-items:center;justify-content:center;font-size:1.6rem;display:flex;
+}
+.lightbox-prev{left:16px}
+.lightbox-next{right:16px}
+@media (max-width:600px){
+  .lightbox-prev{left:6px}
+  .lightbox-next{right:6px}
+}
 
 /* Toast */
 .toast{
